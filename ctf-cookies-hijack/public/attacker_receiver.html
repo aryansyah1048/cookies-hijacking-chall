@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Receiver — Sim</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <style>
+      :root {
+        --bg: #071426;
+        --card: #081526;
+        --muted: #9fb3bf;
+        --accent: #06b6d4;
+      }
+      body {
+        margin: 0;
+        background: linear-gradient(180deg, #071426, #04121a);
+        font-family: Inter, ui-sans-serif, system-ui, Segoe UI, Roboto, Arial;
+        color: #e6f7fb;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+      .card {
+        max-width: 820px;
+        width: 100%;
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.02),
+          transparent
+        );
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 14px 46px rgba(2, 6, 23, 0.7);
+      }
+      h2 {
+        margin: 0;
+      }
+      pre {
+        background: #021220;
+        padding: 12px;
+        border-radius: 8px;
+        color: #9fe1e9;
+        overflow: auto;
+        min-height: 90px;
+        font-family: ui-monospace, monospace;
+      }
+      .muted {
+        color: var(--muted);
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h2>Receiver (simulation)</h2>
+      <div class="muted">
+        Incoming payloads will be shown below if present in the query string.
+      </div>
+      <pre id="out">No payload received</pre>
+    </div>
+
+    <script>
+      const p = new URLSearchParams(location.search);
+      const c = p.get("c");
+      if (c) {
+        try {
+          // decode for nicer display
+          document.getElementById("out").textContent = decodeURIComponent(c);
+        } catch (e) {
+          document.getElementById("out").textContent = c;
+        }
+      }
+    </script>
+  </body>
+</html>
