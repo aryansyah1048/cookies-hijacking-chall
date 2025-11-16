@@ -1,0 +1,71 @@
+body.bg {
+  background: url("assets/herosection.png") no-repeat center center fixed;
+  background-size: cover;
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+}
+
+.center-card {
+  width: 350px;
+  margin: 100px auto;
+  background: rgba(255, 0, 0, 0.15);
+  backdrop-filter: blur(3px);
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+}
+
+.logo {
+  width: 80px;
+  margin-bottom: 15px;
+}
+
+.title {
+  color: #ffcccc;
+  margin-bottom: 20px;
+  font-size: 26px;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: none;
+  border-radius: 8px;
+  background: rgb(255, 228, 228);
+  font-size: 15px;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  background: #c62828;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background: #ff5252;
+  transform: scale(1.05);
+}
+
+.desc {
+  color: #ffe5e5;
+  margin-bottom: 15px;
+}
+
+.flag-box {
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  font-size: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
